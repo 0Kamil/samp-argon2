@@ -1,0 +1,22 @@
+[package]
+name = "samp-argon2"
+version = "0.1.0"
+authors = ["0Kamil"]
+edition = "2018"
+
+[lib]
+name = "samp_argon2"
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
+panic = "abort"
+
+[dependencies]
+samp = {git = "https://github.com/ZOTTCE/samp-rs/"}
+log = "0.4.6"
+fern = "0.5.7"
+rust-argon2 = "2.0.0"
+threadpool = "1.8.1"
+encoding_rs = "0.8.33"
+chardetng = "0.1.17"
